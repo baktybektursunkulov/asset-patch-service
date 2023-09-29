@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  patch-service:
+    image: kcell/asset-patch-service
+    environment:
+      - DATASOURCE_URL=jdbc:postgresql://localhost:5433/assets?stringtype=unspecified
+      - DATASOURCE_USER=assets
+      - DATASOURCE_PASSWORD=assets
+    network_mode: "host"
